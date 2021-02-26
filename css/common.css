@@ -1,0 +1,263 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;700&display=swap');
+
+/* 
+font-family: 'Great Vibes', cursive; => 강조폰트
+font-family: 'Poppins', sans-serif; => 주 폰트
+*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+header, section, article, aside, main, nav, footer{
+    display: block;
+}
+header:after, section:after, article:after, aside:after, main:after, nav:after, footer:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+}
+ul, ol{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clear{
+    clear: both;
+}
+
+{
+    font-family: 'Great Vibes', cursive;
+}
+/*스크롤바를 보이지 않도록 처리해주는 스타일 선언(기능 작동 가능)*/
+body{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+/* 내가 푼거 */
+/* header part */
+/* header{}
+header .main{
+    height: 1000px;
+    background-image: url(../img/main_04.jpg);
+    background-size: cover;
+}
+header .wrap{
+    background-color: rgba(255, 255, 255, 0.75);
+}
+header .wrap .top{
+    width: 1200px;
+    height: 80px;
+    padding: 0 10px;
+    margin: 0 auto;
+    position: relative; 
+}
+header .wrap .top .logo{}
+header .wrap .top .logo img{
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 10px;
+    height: 24px;
+}
+header .wrap .top > ul{
+    text-align: center;
+    height: 80px;
+    font: 0;
+}
+header .wrap .top > ul > li{
+    display: inline-block;
+    vertical-align: top;
+}
+header .wrap .top > ul > li > a{
+    display: block;
+    font-size: 14px;
+    color: #565656;
+    line-height: 24px;
+    padding: 28px 30px 24px;
+    border-bottom: 4px solid transparent;
+    text-transform: uppercase;
+}
+header .wrap .top > ul > li > a:hover{
+    border-bottom: 4px solid #662021;
+    color: #662021;
+}
+header .wrap .icon{
+    position: absolute;
+    top: 28px;
+    right: 10px;
+}
+header .wrap .icon ul{
+    font: 0;
+}
+header .wrap .icon ul > li{
+    display: inline-block;
+    vertical-align: top;
+}
+header .wrap .icon ul > li > a{
+    display: block;
+}
+header .wrap .icon ul > li > a > img{
+    display: block;
+    margin: 0 5px;
+    width: 24px;
+    height: 24px;
+}
+header .wrap .icon ul > li > a:nth-child(1) > img:hover{
+    background-image: url(../img/fb_icon_hover.png);
+}
+header .main .wrap .top .txt{
+    
+}
+header .main .wrap .txt h3{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    font-size: 48px;
+    bottom: calc(20%);
+    right: 55px;
+    color: #565656;
+} */
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.75);
+    z-index: 2;
+    border-bottom: 1px solid #ccc;
+}
+header .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+header .wrap .logo{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header .wrap .logo a{
+    display: block;
+}
+header .wrap .logo a img{
+    display: block;
+    height: 24px;
+}
+header nav{
+    text-align: center;
+}
+header nav ul{
+    font-size: 0;
+}
+header nav ul li{
+    display: inline-block;
+    margin: 0 30px;
+}
+header nav ul li a{
+    display: block;
+    font-size: 14px;
+    line-height: 80px;
+    color: #373735;
+    position: relative;
+    text-transform: uppercase;
+}
+header nav ul li:hover a{
+    color: #662021;
+}
+header nav ul li:hover a:after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #662021;
+    left: 0;
+    bottom: 0;
+}
+header .wrap .sns{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header .wrap .sns ul{}
+header .wrap .sns ul li{
+    display: inline-block;
+    margin: 0 5px;
+}
+header .wrap .sns ul li:last-child{
+    margin-right: 0;
+}
+header .wrap .sns ul li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: background-image 0.5s;
+}
+header .wrap .sns ul li:nth-child(1) a{
+    background-image: url(../img/fb_icon.png);
+}
+header .wrap .sns ul li:nth-child(1) a:hover{
+    background-image: url(../img/fb_icon_hover.png);
+}
+header .wrap .sns ul li:nth-child(2) a{
+    background-image: url(../img/insta_icon.png);
+}
+header .wrap .sns ul li:nth-child(2) a:hover{
+    background-image: url(../img/insta_icon_hover.png);
+}
+header .wrap .sns ul li:nth-child(3) a{
+    background-image: url(../img/youtube_icon.png);
+}
+header .wrap .sns ul li:nth-child(3) a:hover{
+    background-image: url(../img/youtube_icon_hover.png);
+}
+
+/* footer part CSS */
+
+footer{background-color: #d9d9d9;}
+footer .wrap{width: 1200px; margin: 0 auto; padding: 40px 0;}
+footer .wrap .f_main{width: 100%; position: relative;}
+footer .wrap .f_main .f_logo{position: absolute; top:0; left: 10px;}
+footer .wrap .f_main .f_logo img{display: block; height: 80px;}
+
+footer .wrap .f_main .f_info{}
+footer .wrap .f_main .f_info ul{font-size: 0; text-align: center;}
+footer .wrap .f_main .f_info ul li{display: inline-block; padding: 33px 0; margin: 0 10px;}  /*(80-14)/2 = 33*/
+footer .wrap .f_main .f_info ul li a{display: block; font-size: 14px; color:#373735; line-height: 1;}
+
+footer .wrap .f_main .f_sns{position: absolute; top:0; right:0; padding: 25px 0;}
+footer .wrap .f_main .f_sns ul{font-size: 0;}
+footer .wrap .f_main .f_sns ul li{display: inline-block; margin: 0 10px;}
+footer .wrap .f_main .f_sns ul li a{display: block; width: 30px; height: 30px; background-size: cover; background-position: 50% 50%;}
+footer .wrap .f_main .f_sns ul li:nth-child(1) a{background-image: url(../img/fb_icon.png);}
+footer .wrap .f_main .f_sns ul li:nth-child(2) a{background-image: url(../img/insta_icon.png);}
+footer .wrap .f_main .f_sns ul li:nth-child(3) a{background-image: url(../img/youtube_icon.png);}
+
+footer .wrap .f_main .f_sns ul li:nth-child(1) a:hover{background-image: url(../img/fb_icon_hover.png);}
+footer .wrap .f_main .f_sns ul li:nth-child(2) a:hover{background-image: url(../img/insta_icon_hover.png);}
+footer .wrap .f_main .f_sns ul li:nth-child(3) a:hover{background-image: url(../img/youtube_icon_hover.png);}
+
+
+
+footer .wrap .copyrights{padding-top: 20px; line-height: 20px; font-size: 14px; color:#373735; text-align: center;}
